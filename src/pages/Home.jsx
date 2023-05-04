@@ -11,6 +11,7 @@ import {
   FcManager,
   FcOnlineSupport,
 } from "react-icons/fc";
+import { Button } from "../components/Button";
 function Home() {
   //get products from products context
   const { products } = useContext(ProductContext);
@@ -36,35 +37,22 @@ function Home() {
       <section className="py-10 px-5">
         {/* botones de categorias */}
         <div className=" flex gap-x-3 justify-center ">
-          <button
-            className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded text-[10px]"
-            onClick={() => handleClick("electronics")}
-          >
+          <Button onClick={() => handleClick("electronics")}>
             <FcElectronics className="inline-block mr-2 text-xl" />
             Electronics
-          </button>
-
-          <button
-            className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded text-[10px]"
-            onClick={() => handleClick("jewelery")}
-          >
+          </Button>
+          <Button onClick={() => handleClick("jewelery")}>
             <FcCompactCamera className="inline-block mr-2 text-xl " />
             Jewelery
-          </button>
-          <button
-            className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded text-[10px]"
-            onClick={() => handleClick("men's clothing")}
-          >
+          </Button>
+          <Button onClick={() => handleClick("men's clothing")}>
             <FcManager className="inline-block mr-2 text-xl " />
             Men's clothing
-          </button>
-          <button
-            className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded text-[10px]"
-            onClick={() => handleClick("women's clothing")}
-          >
+          </Button>
+          <Button onClick={() => handleClick("women's clothing")}>
             <FcOnlineSupport className="inline-block mr-2 text-xl" />
             Women's clothing
-          </button>
+          </Button>
         </div>
 
         <div className="container mx-auto pt-10">

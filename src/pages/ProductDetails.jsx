@@ -1,9 +1,14 @@
 import React, { useContext } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+//import context
 import { ProductContext } from "../contexts-api/context/ProductContext";
+//import react router dom
+import { useNavigate, useParams } from "react-router-dom";
+//import redux
 import { addCart } from "../redux/action";
 import { useDispatch } from "react-redux";
+//import components
 import StarRating from "../components/StarRanting";
+//import icons
 import { IoMdArrowBack } from "react-icons/io";
 
 function ProductDetails() {
@@ -32,7 +37,7 @@ function ProductDetails() {
     <section className="pt-32 pb-12 lg:py-32 h-full flex items-center ">
       <div className="container mx-auto">
         <div className="cursor-pointer w-8 h-8 flex justify-center items-center">
-          <IoMdArrowBack className="text-2xl" onClick={() => navigate(-1)} />
+          <IoMdArrowBack className="text-2xl" onClick={() => navigate(-1)} size="small" />
         </div>
         <div className="flex flex-col lg:flex-row items-center ">
           {/* imagen */}
