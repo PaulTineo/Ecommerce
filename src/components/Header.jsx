@@ -33,11 +33,11 @@ const Header = () => {
         >
           {isLoggedIn ? (
             <button onClick={handleLogout} className="font-medium">
-              Logout
+              Sign out
             </button>
           ) : (
             <Link to={"/login"}>
-              <button className="font-medium">Login</button>
+              <button className="font-medium">Sign in</button>
             </Link>
           )}
           <Link to={"/cart"}>

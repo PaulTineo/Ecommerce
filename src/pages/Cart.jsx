@@ -12,6 +12,7 @@ import { IoMdArrowBack } from "react-icons/io";
 
 function Cart() {
   const [total, setTotal] = useState(0);
+  //obtener el estado del carrito
   const state = useSelector((state) => state.cart);
   const { cart } = state;
   const navigate = useNavigate();
@@ -26,7 +27,7 @@ function Cart() {
 
   return (
 
-    <div className="w-full bg-white top-0 h-full shadow-2xl z-20 px-4 py-4">
+    <div className="w-full bg-white top-0 h-full shadow-2xl z-20 px-4 py-4 mt-4">
       <div className="flex items-center justify-between py-6 border-b">
         <div className="uppercase text-sm font-semibold">
           Shopping Bag({state.cart.length})
