@@ -38,7 +38,7 @@ export const cartReducer = (state = initialState, action) => {
       const productinCart = state.cart.find((item) =>
         item.id === action.payload.id ? true : false
       );
-      //Disminuye la cantidad si el producto ya está en el carrito
+      //Elimina producto del carrito
       if (productinCart.qty === 1) {
         const newCart = state.cart.filter(
           (item) => item.id !== action.payload.id
@@ -49,7 +49,7 @@ export const cartReducer = (state = initialState, action) => {
           cart: newCart,
         };
       } else {
-        //Agregar nuevo producto al carrito
+        //Disminuye el contador del producto en el carrito
         const newCart = state.cart.map((item) =>
           item.id === action.payload.id
             ? { ...productinCart, qty: productinCart.qty - 1 }
